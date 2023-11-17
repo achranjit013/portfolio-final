@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "./globalStyles";
+import { AnimatePresence } from "framer-motion";
+import { LightTheme } from "./components/Themes";
+import { Route, Routes, useLocation } from "react-router-dom";
+
+// components
+import Main from "./components/Main";
+import About from "./components/About";
+import Skills from "./components/Skills";
 
 function App() {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+
+      <ThemeProvider theme={LightTheme}>
+        {/* For framer-motion animation on page change! */}
+        {/* Changed prop from exitBefore to mode */}
+        <AnimatePresence mode="wait">
+          {/* Changed Switch to Routes */}
+
+          <Routes key={location.pathname} location={location}>
+            {/* Changed component to element */}
+
+            <Route path="/" element={<Main />} />
+
+            <Route path="/about" element={<About />} />
+
+            {/* <Route path="/work" element={<WorkPage />} /> */}
+
+            <Route path="/skills" element={<Skills />} />
+            {/* Below is to catch all the other routes and send the user to main component,
+you can add custom 404 component or message instead of Main component*/}
+            <Route path="*" element={<Main />} />
+          </Routes>
+        </AnimatePresence>
+      </ThemeProvider>
+    </>
   );
 }
 
