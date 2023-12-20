@@ -3,6 +3,27 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Me from "../assets/images/profile-img.png";
 
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) */
+/* Large devices (desktops, 992px and up) */
+/* X-Large devices (large desktops, 1200px and up) */
+/* XX-Large devices (larger desktops, 1400px and up) */
+const breakpoints = {
+  smallDevices: "576px",
+  mediumDevices: "768px",
+  largeDevices: "992px",
+  xLargeDevices: "1200px",
+  xxLargeDevices: "1400px",
+};
+
+const media = {
+  smallDevices: `(max-width: ${breakpoints.smallDevices})`,
+  mediumDevices: `(max-width: ${breakpoints.mediumDevices})`,
+  largeDevices: `(max-width: ${breakpoints.largeDevices})`,
+  xLargeDevices: `(max-width: ${breakpoints.xLargeDevices})`,
+  xxLargeDevices: `(max-width: ${breakpoints.xxLargeDevices})`,
+};
+
 const Box = styled(motion.div)`
   position: absolute;
   left: 50%;
@@ -31,6 +52,13 @@ const Box = styled(motion.div)`
   border-right: 2px solid ${(props) => props.theme.text};
 
   z-index: 1;
+
+  @media ${media.mediumDevices} {
+    width: 90vw;
+    & > :last-child {
+      // display: none;
+    }
+  }
 `;
 const SubBox = styled.div`
   width: 50%;
@@ -44,6 +72,10 @@ const SubBox = styled.div`
     transform: translate(-50%, 0%);
     width: 75%;
     height: 100%;
+  }
+
+  @media ${media.mediumDevices} {
+    width: 100%;
   }
 `;
 
@@ -60,6 +92,11 @@ const Text = styled.div`
     color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
+  }
+
+  @media ${media.mediumDevices} {
+    // display: flex;
+    font-size: 1rem;
   }
 `;
 

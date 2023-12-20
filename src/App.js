@@ -8,6 +8,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Main from "./components/Main";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import SkillsPage from "./components/SkillsPage";
 
 function App() {
   const location = useLocation();
@@ -27,11 +29,10 @@ function App() {
 
             <Route path="/" element={<Main />} />
 
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<SkillsPage />} />
             <Route path="/about" element={<About />} />
 
-            {/* <Route path="/work" element={<WorkPage />} /> */}
-
-            <Route path="/skills" element={<Skills />} />
             {/* Below is to catch all the other routes and send the user to main component,
 you can add custom 404 component or message instead of Main component*/}
             <Route path="*" element={<Main />} />

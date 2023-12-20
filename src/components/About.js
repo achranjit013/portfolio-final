@@ -99,7 +99,7 @@ const About = () => {
           Let's connect and explore opportunities for growth and collaboration!
         </Main>
 
-        <BigTitlte text="ABOUT" top="80%" right="35%" />
+        <BigTitlte text="ABOUT" />
       </Box>
     </ThemeProvider>
   );

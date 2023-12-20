@@ -4,6 +4,27 @@ import styled from "styled-components";
 import { Facebook, Github, Instagram, LinkedIn } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) */
+/* Large devices (desktops, 992px and up) */
+/* X-Large devices (large desktops, 1200px and up) */
+/* XX-Large devices (larger desktops, 1400px and up) */
+const breakpoints = {
+  smallDevices: "576px",
+  mediumDevices: "768px",
+  largeDevices: "992px",
+  xLargeDevices: "1200px",
+  xxLargeDevices: "1400px",
+};
+
+const media = {
+  smallDevices: `(max-width: ${breakpoints.smallDevices})`,
+  mediumDevices: `(max-width: ${breakpoints.mediumDevices})`,
+  largeDevices: `(max-width: ${breakpoints.largeDevices})`,
+  xLargeDevices: `(max-width: ${breakpoints.xLargeDevices})`,
+  xxLargeDevices: `(max-width: ${breakpoints.xxLargeDevices})`,
+};
+
 const Icons = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,6 +39,15 @@ const Icons = styled.div`
   & > *:not(:last-child) {
     margin: 0.5rem 0;
   }
+
+  @media ${media.mediumDevices} {
+    // display: none;
+    flex-direction: ${(props) => (props.click ? "row" : "column")};
+    bottom: ${(props) => (props.click ? "23%" : "0")};
+    left: ${(props) => (props.click ? "50%" : "2rem")};
+    transform: ${(props) => (props.click ? "translate(-100%, 0%)" : "")};
+    gap: ${(props) => (props.click ? "1rem" : "")};
+  }
 `;
 
 const Line = styled(motion.span)`
@@ -25,11 +55,16 @@ const Line = styled(motion.span)`
   height: 8rem;
   background-color: ${(props) =>
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
+
+  @media ${media.mediumDevices} {
+    display: ${(props) => (props.click ? "none" : "")};
+  }
 `;
 
 const SocialIcons = (props) => {
+  console.log(props);
   return (
-    <Icons>
+    <Icons click={props.click}>
       {/* LinkedIn */}
       <motion.div
         initial={{ scale: 0 }}
@@ -108,6 +143,7 @@ const SocialIcons = (props) => {
       </motion.div>
 
       <Line
+        click={props.click}
         color={props.theme}
         initial={{
           height: 0,
