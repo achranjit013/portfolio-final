@@ -48,7 +48,7 @@ const Box = styled(motion.li)`
   }
 
   @media ${media.mediumDevices} {
-    width: 25rem;
+    width: 20rem;
     height: 25rem;
   }
 `;
