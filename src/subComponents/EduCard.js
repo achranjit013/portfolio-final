@@ -37,7 +37,7 @@ const Box = styled(motion.li)`
 
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 
   transition: all 0.2s ease;
 
