@@ -24,7 +24,7 @@ const media = {
 
 const Box = styled(motion.li)`
   width: 40rem;
-  height: 30rem;
+  height: 28rem;
 
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
