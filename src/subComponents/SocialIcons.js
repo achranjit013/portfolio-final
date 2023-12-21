@@ -72,7 +72,8 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://www.linkedin.com/in/ranjit-acharya/"}
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/ranjit-acharya/"
         >
           <LinkedIn
             width={25}
@@ -91,7 +92,8 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://github.com/achranjit013"}
+          rel="noreferrer"
+          href="https://github.com/achranjit013"
         >
           <Github
             width={25}
@@ -110,7 +112,8 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://www.facebook.com/ranzeet.acharya/"}
+          rel="noreferrer"
+          href="https://www.facebook.com/ranzeet.acharya/"
         >
           <Facebook
             width={25}
@@ -129,10 +132,11 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://www.instagram.com/achranjit013/"}
+          rel="noreferrer"
+          href="https://www.instagram.com/achranjit013/"
         >
           <Instagram
-            style={{ "border-radius": "100%" }}
+            style={{ borderRadius: "100%" }}
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}

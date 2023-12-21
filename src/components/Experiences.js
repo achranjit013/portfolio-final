@@ -11,6 +11,7 @@ import { Skills } from "../data/SkillsData";
 import SkillsCard from "../subComponents/SkillsCard";
 import { Qualification } from "../data/EducationsData";
 import { Professions } from "../data/ExperiencesData";
+import EduCard from "../subComponents/EduCard";
 
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
@@ -54,7 +55,7 @@ const Box = styled.div`
   }
 
   @media ${media.mediumDevices} {
-    height: 160vh;
+    height: 180vh;
   }
 `;
 
@@ -140,7 +141,7 @@ const Experiences = () => {
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
           {Professions.map((d) => (
-            <SkillsCard key={d.id} data={d} />
+            <EduCard key={d.id} data={d} />
           ))}
         </Main>
 

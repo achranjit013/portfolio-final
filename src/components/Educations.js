@@ -7,9 +7,8 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 import { DarkTheme } from "./Themes";
-import { Skills } from "../data/SkillsData";
-import SkillsCard from "../subComponents/SkillsCard";
 import { Qualification } from "../data/EducationsData";
+import EduCard from "../subComponents/EduCard";
 
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
@@ -45,7 +44,7 @@ const Box = styled.div`
   }
 
   @media ${media.mediumDevices} {
-    height: 180vh;
+    height: 240vh;
   }
 `;
 
@@ -114,6 +113,7 @@ const Educations = () => {
     };
 
     window.addEventListener("scroll", rotate);
+
     return () => {
       window.removeEventListener("scroll", rotate);
     };
@@ -131,7 +131,7 @@ const Educations = () => {
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
           {Qualification.map((d) => (
-            <SkillsCard key={d.id} data={d} />
+            <EduCard key={d.id} data={d} />
           ))}
         </Main>
 

@@ -7,7 +7,6 @@ import { Route, Routes, useLocation } from "react-router-dom";
 // components
 import Main from "./components/Main";
 import About from "./components/About";
-import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import SkillsPage from "./components/SkillsPage";
 import Educations from "./components/Educations";

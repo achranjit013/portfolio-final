@@ -119,13 +119,23 @@ const SkillsPage = () => {
     let element = ref.current;
 
     const rotate = () => {
-      element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      // element.style.transform = `translateX(${-window.pageYOffset}px)`;
 
-      return (yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)");
+      // return (yinyang.current.style.transform =
+      //   "rotate(" + -window.pageYOffset + "deg)");
+
+      if (element) {
+        element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      }
+
+      if (yinyang.current) {
+        return (yinyang.current.style.transform = `rotate(${-window.pageYOffset}deg)`);
+      }
     };
 
     window.addEventListener("scroll", rotate);
+
+    // Clean up the event listener when the component is unmounted
     return () => {
       window.removeEventListener("scroll", rotate);
     };

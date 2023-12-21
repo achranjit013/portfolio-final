@@ -4,7 +4,7 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import PowerButton from "../subComponents/PowerButton";
 import FooterComponent from "../subComponents/FooterComponent";
