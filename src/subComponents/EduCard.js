@@ -24,7 +24,7 @@ const media = {
 
 const Box = styled(motion.li)`
   width: 40rem;
-  height: 25rem;
+  height: 30rem;
 
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
@@ -49,7 +49,6 @@ const Box = styled(motion.li)`
 
   @media ${media.mediumDevices} {
     width: 18rem;
-    height: 25rem;
   }
 `;
 
