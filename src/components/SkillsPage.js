@@ -34,7 +34,6 @@ const media = {
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  // height: 100vh;
   height: 300vh;
   position: relative;
   display: flex;
@@ -45,17 +44,14 @@ const Box = styled.div`
   }
 
   @media ${media.xLargeDevices} {
-    // height: 150vh;
     height: 360vh;
   }
 
   @media ${media.largeDevices} {
-    // height: 180vh;
     height: 400vh;
   }
 
   @media ${media.mediumDevices} {
-    // height: 240vh;
     height: 420vh;
   }
 `;
@@ -69,7 +65,6 @@ const Main = styled(motion.ul)`
   color: white;
 
   @media ${media.mediumDevices} {
-    // left: calc(3rem + 5vw);
     left: calc(3.5rem + 5vw);
     top: 8rem;
     z-index: 5;
@@ -119,11 +114,6 @@ const SkillsPage = () => {
     let element = ref.current;
 
     const rotate = () => {
-      // element.style.transform = `translateX(${-window.pageYOffset}px)`;
-
-      // return (yinyang.current.style.transform =
-      //   "rotate(" + -window.pageYOffset + "deg)");
-
       if (element) {
         element.style.transform = `translateX(${-window.pageYOffset}px)`;
       }

@@ -1,11 +1,10 @@
+import { motion } from "framer-motion";
+import { styled } from "styled-components";
+
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
 /* Large devices (desktops, 992px and up) */
 /* X-Large devices (large desktops, 1200px and up) */
-
-import { motion } from "framer-motion";
-import { styled } from "styled-components";
-
 /* XX-Large devices (larger desktops, 1400px and up) */
 const breakpoints = {
   smallDevices: "576px",
@@ -24,35 +23,6 @@ const media = {
 };
 
 const Box = styled(motion.li)`
-  // width: 18rem;
-  // height: 26rem;
-
-  // background-color: ${(props) => props.theme.text};
-  // color: ${(props) => props.theme.body};
-
-  // padding: 1.5rem 2rem;
-  // margin-right: 8rem;
-
-  // border: 1px solid ${(props) => props.theme.body};
-  // border-radius: 0 50px 0 50px;
-
-  // display: flex;
-  // flex-direction: column;
-  // gap: 2rem;
-
-  // transition: all 0.2s ease;
-
-  // &:hover {
-  //   background-color: ${(props) => props.theme.body};
-  //   color: ${(props) => props.theme.text};
-  //   border: 1px solid ${(props) => props.theme.text};
-  // }
-
-  // @media ${media.mediumDevices} {
-  //   width: 14rem;
-  //   height: 20rem;
-  // }
-
   width: 40rem;
   height: 25rem;
 
@@ -67,7 +37,6 @@ const Box = styled(motion.li)`
 
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   gap: 2rem;
 
   transition: all 0.2s ease;

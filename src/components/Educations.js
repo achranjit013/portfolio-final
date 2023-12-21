@@ -40,11 +40,19 @@ const Box = styled.div`
   align-items: center;
 
   @media ${media.xxLargeDevices} {
-    height: 280vh;
+    height: 340vh;
+  }
+
+  @media ${media.xLargeDevices} {
+    height: 360vh;
+  }
+
+  @media ${media.largeDevices} {
+    height: 400vh;
   }
 
   @media ${media.mediumDevices} {
-    height: 240vh;
+    height: 420vh;
   }
 `;
 

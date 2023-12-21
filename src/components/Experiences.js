@@ -7,9 +7,6 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 import { DarkTheme } from "./Themes";
-import { Skills } from "../data/SkillsData";
-import SkillsCard from "../subComponents/SkillsCard";
-import { Qualification } from "../data/EducationsData";
 import { Professions } from "../data/ExperiencesData";
 import EduCard from "../subComponents/EduCard";
 
@@ -43,19 +40,19 @@ const Box = styled.div`
   align-items: center;
 
   @media ${media.xxLargeDevices} {
-    height: 260vh;
+    height: 340vh;
   }
 
   @media ${media.xLargeDevices} {
-    height: 240vh;
+    height: 360vh;
   }
 
   @media ${media.largeDevices} {
-    height: 220vh;
+    height: 400vh;
   }
 
   @media ${media.mediumDevices} {
-    height: 180vh;
+    height: 420vh;
   }
 `;
 
