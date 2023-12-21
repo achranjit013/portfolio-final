@@ -37,7 +37,7 @@ const Box = styled(motion.li)`
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 
   transition: all 0.2s ease;
 
@@ -48,7 +48,7 @@ const Box = styled(motion.li)`
   }
 
   @media ${media.mediumDevices} {
-    width: 20rem;
+    width: 18rem;
     height: 25rem;
   }
 `;
