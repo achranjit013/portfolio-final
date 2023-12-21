@@ -1,20 +1,23 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ThemeProvider, styled } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
-import { Work } from "../data/WorkData";
-import Card from "../subComponents/Card";
 import { DarkTheme } from "./Themes";
+import { Skills } from "../data/SkillsData";
+import SkillsCard from "../subComponents/SkillsCard";
+import { Qualification } from "../data/EducationsData";
+import { Professions } from "../data/ExperiencesData";
 
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
 /* Large devices (desktops, 992px and up) */
 /* X-Large devices (large desktops, 1200px and up) */
 /* XX-Large devices (larger desktops, 1400px and up) */
+
 const breakpoints = {
   smallDevices: "576px",
   mediumDevices: "768px",
@@ -33,25 +36,25 @@ const media = {
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  height: 300vh;
+  height: 140vh;
   position: relative;
   display: flex;
   align-items: center;
 
   @media ${media.xxLargeDevices} {
-    height: 340vh;
+    height: 260vh;
   }
 
   @media ${media.xLargeDevices} {
-    height: 360vh;
+    height: 240vh;
   }
 
   @media ${media.largeDevices} {
-    height: 400vh;
+    height: 220vh;
   }
 
   @media ${media.mediumDevices} {
-    height: 420vh;
+    height: 160vh;
   }
 `;
 
@@ -64,8 +67,8 @@ const Main = styled(motion.ul)`
   color: white;
 
   @media ${media.mediumDevices} {
-    top: 8rem;
     left: calc(3.5rem + 5vw);
+    top: 8rem;
     z-index: 5;
   }
 `;
@@ -105,7 +108,7 @@ const TopBar = styled.div`
   align-items: center;
 `;
 
-const Projects = () => {
+const Experiences = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
 
@@ -136,8 +139,8 @@ const Projects = () => {
         <SocialIcons theme="dark" />
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
-          {Work.map((d) => (
-            <Card key={d.id} data={d} />
+          {Professions.map((d) => (
+            <SkillsCard key={d.id} data={d} />
           ))}
         </Main>
 
@@ -145,10 +148,10 @@ const Projects = () => {
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 
-        <BigTitlte text="PROJECTS" />
+        <BigTitlte text="EXPERIENCES" />
       </Box>
     </ThemeProvider>
   );
 };
 
-export default Projects;
+export default Experiences;

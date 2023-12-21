@@ -113,7 +113,7 @@ const Intro = () => {
           <h3>I'm Ranjit Acharya.</h3>
           <h6>
             I am aspiring software developer passionate about crafting engaging
-            and responsive web applications !
+            and responsive web applications!
           </h6>
         </Text>
       </SubBox>

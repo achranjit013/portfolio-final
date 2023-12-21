@@ -30,7 +30,7 @@ export const Skills = [
       "Express",
       "MySQL",
       "MongoDB",
-      "RESTful and GraphQL",
+      "RESTful API",
       "Testing",
       "Debugging",
       "Troubleshooting",
@@ -40,13 +40,14 @@ export const Skills = [
     id: 3,
     logo: <Design width={40} height={40} />,
     heading: "More",
-    description: "I love learning and applying.",
+    description:
+      "I love learning and acquiring new skills for continuous personal and professional development.",
     subHeading: "Skills",
     currSkills: [
       "Version Control/Git",
       "Build Tools: Webpack, Babel, npm, or Yarn",
       "Monolithic and Microservices architecture",
-      "Soft Skills: Communication, Problem-Solving and Attention to Details",
+      "Communication, Quick Learner, Problem solving, Attention to details, Collaboration & Team work, Adaptability",
     ],
   },
 ];

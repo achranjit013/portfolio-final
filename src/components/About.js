@@ -7,10 +7,11 @@ import PowerButton from "../subComponents/PowerButton";
 import ParticlesComponent from "../subComponents/ParticleComponent";
 import BigTitlte from "../subComponents/BigTitlte";
 import astronaut from "../assets/images/spaceman.png";
+import { Link } from "react-router-dom";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  width: 100vw;
+  // width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -42,10 +43,14 @@ const Main = styled.div`
   height: 60vh;
   z-index: 3;
   line-height: 1.5;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: calc(0.6rem + 1vw);
+  flex-direction: column;
+  gap: 1rem;
+  // justify-content: center;
+  // align-items: center;
+
+  font-size: calc(0.4rem + 1vw);
   backdrop-filter: blur(4px);
 
   position: absolute;
@@ -67,6 +72,14 @@ const TopBar = styled.div`
   align-items: center;
 `;
 
+const BottomLinks = styled.p`
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  font-weight: 900;
+  font-style: normal;
+`;
+
 const About = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
@@ -85,18 +98,72 @@ const About = () => {
           <img src={astronaut} alt="spaceman" />
         </Spaceman>
         <Main>
-          I'm a well-organised and dedicated software developer. I love to
-          create dynamic and user-friendly web applications.
-          <br /> <br />
-          I have adepted in all stages of Software Development Life Cycle
-          (SDLC), bringing forth expertise in web development, testing,
-          debugging processes, and maintenance of web systems.
-          <br /> <br />
-          I'm interested in both frontend and backend. I like trying new things
-          and building great projects. I am able to effectively self-manage
-          during independent projects as well as a team player.
-          <br /> <br />
-          Let's connect and explore opportunities for growth and collaboration!
+          <p>
+            I'm a well-organised and dedicated software developer. I love to
+            create dynamic and user-friendly web applications.
+          </p>
+          <p>
+            I have adepted in all stages of Software Development Life Cycle
+            (SDLC), bringing forth expertise in web development, testing,
+            debugging processes, and maintenance of web applications.
+          </p>
+          <p>
+            I'm interested in both frontend and backend. I like trying new
+            things and building great projects. I am able to effectively
+            self-manage during independent projects as well as a great team
+            player.
+          </p>
+          <p>
+            Let's connect via{" "}
+            <Link
+              to="mailto:achranjit013@gmail.com"
+              style={{ textDecoration: "none", color: "blue" }}
+            >
+              email
+            </Link>{" "}
+            or{" "}
+            <Link
+              to="https://www.linkedin.com/in/ranjit-acharya/"
+              target="_blank"
+              style={{ textDecoration: "none", color: "blue" }}
+            >
+              linkedIn
+            </Link>{" "}
+            and explore opportunities for growth and collaboration!
+          </p>
+          <p>
+            Please visit the links below to further explore my educational and
+            professional background!
+          </p>
+          <BottomLinks>
+            <Link
+              to="/educations"
+              style={{
+                textDecoration: "none",
+                color: "black",
+                textTransform: "uppercase",
+                background: "white",
+                padding: "0.5rem",
+                borderRadius: "10px",
+              }}
+            >
+              Education
+            </Link>
+
+            <Link
+              to="/experiences"
+              style={{
+                textDecoration: "none",
+                color: "black",
+                textTransform: "uppercase",
+                background: "white",
+                padding: "0.5rem",
+                borderRadius: "10px",
+              }}
+            >
+              Experiences
+            </Link>
+          </BottomLinks>
         </Main>
 
         <BigTitlte text="ABOUT" />

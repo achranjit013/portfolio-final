@@ -60,11 +60,6 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: start;
   gap: 1rem;
-
-  // @media ${media.mediumDevices} {
-  //   flex-direction: column-reverse;
-  //   gap: 1rem;
-  // }
 `;
 
 const ContentLeft = styled.div`

@@ -41,7 +41,6 @@ const Icons = styled.div`
   }
 
   @media ${media.mediumDevices} {
-    // display: none;
     flex-direction: ${(props) => (props.click ? "row" : "column")};
     bottom: ${(props) => (props.click ? "23%" : "0")};
     left: ${(props) => (props.click ? "50%" : "2rem")};
@@ -62,7 +61,6 @@ const Line = styled(motion.span)`
 `;
 
 const SocialIcons = (props) => {
-  console.log(props);
   return (
     <Icons click={props.click}>
       {/* LinkedIn */}

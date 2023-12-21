@@ -24,8 +24,37 @@ const media = {
 };
 
 const Box = styled(motion.li)`
-  width: 18rem;
-  height: 26rem;
+  // width: 18rem;
+  // height: 26rem;
+
+  // background-color: ${(props) => props.theme.text};
+  // color: ${(props) => props.theme.body};
+
+  // padding: 1.5rem 2rem;
+  // margin-right: 8rem;
+
+  // border: 1px solid ${(props) => props.theme.body};
+  // border-radius: 0 50px 0 50px;
+
+  // display: flex;
+  // flex-direction: column;
+  // gap: 2rem;
+
+  // transition: all 0.2s ease;
+
+  // &:hover {
+  //   background-color: ${(props) => props.theme.body};
+  //   color: ${(props) => props.theme.text};
+  //   border: 1px solid ${(props) => props.theme.text};
+  // }
+
+  // @media ${media.mediumDevices} {
+  //   width: 14rem;
+  //   height: 20rem;
+  // }
+
+  width: 40rem;
+  height: 25rem;
 
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
@@ -38,6 +67,7 @@ const Box = styled(motion.li)`
 
   display: flex;
   flex-direction: column;
+  // justify-content: space-between;
   gap: 2rem;
 
   transition: all 0.2s ease;
@@ -49,8 +79,8 @@ const Box = styled(motion.li)`
   }
 
   @media ${media.mediumDevices} {
-    width: 14rem;
-    height: 20rem;
+    width: 13.5rem;
+    height: 25rem;
   }
 `;
 
@@ -90,7 +120,6 @@ const Description = styled.h2`
 
 const Tags = styled.div`
   display: flex;
-  // flex-wrap: wrap;
   flex-direction: column;
   gap: 0.5rem;
   border-top: 2px solid ${(props) => props.theme.body};
@@ -121,7 +150,16 @@ const Item = {
 };
 
 const SkillsCard = (props) => {
-  const { id, logo, heading, description, subHeading, currSkills } = props.data;
+  const {
+    id,
+    logo,
+    heading,
+    description,
+    subHeading,
+    currSkills,
+    university,
+    gradPeriod,
+  } = props.data;
 
   return (
     <Box key={id} variants={Item}>
@@ -130,6 +168,13 @@ const SkillsCard = (props) => {
           <Logo>{logo}</Logo>
           <Title>{heading}</Title>
         </Heading>
+
+        {university && (
+          <p style={{ fontStyle: "italic" }}>
+            {university} ({gradPeriod})
+          </p>
+        )}
+
         <Description>{description}</Description>
       </Content>
 

@@ -1,23 +1,21 @@
-/* Small devices (landscape phones, 576px and up) */
-/* Medium devices (tablets, 768px and up) */
-/* Large devices (desktops, 992px and up) */
-/* X-Large devices (large desktops, 1200px and up) */
-
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { ThemeProvider, styled } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
-import { Work } from "../data/WorkData";
-import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 import { DarkTheme } from "./Themes";
 import { Skills } from "../data/SkillsData";
 import SkillsCard from "../subComponents/SkillsCard";
 
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) */
+/* Large devices (desktops, 992px and up) */
+/* X-Large devices (large desktops, 1200px and up) */
 /* XX-Large devices (larger desktops, 1400px and up) */
+
 const breakpoints = {
   smallDevices: "576px",
   mediumDevices: "768px",
@@ -36,21 +34,29 @@ const media = {
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  height: 100vh;
+  // height: 100vh;
+  height: 300vh;
   position: relative;
   display: flex;
   align-items: center;
 
+  @media ${media.xxLargeDevices} {
+    height: 340vh;
+  }
+
   @media ${media.xLargeDevices} {
-    height: 150vh;
+    // height: 150vh;
+    height: 360vh;
   }
 
   @media ${media.largeDevices} {
-    height: 180vh;
+    // height: 180vh;
+    height: 400vh;
   }
 
   @media ${media.mediumDevices} {
-    height: 240vh;
+    // height: 240vh;
+    height: 420vh;
   }
 `;
 
@@ -63,8 +69,10 @@ const Main = styled(motion.ul)`
   color: white;
 
   @media ${media.mediumDevices} {
-    left: calc(3rem + 5vw);
+    // left: calc(3rem + 5vw);
+    left: calc(3.5rem + 5vw);
     top: 8rem;
+    z-index: 5;
   }
 `;
 
@@ -143,7 +151,6 @@ const SkillsPage = () => {
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 
-        {/* <BigTitlte text="PROJECTS" top="80%" right="25%" /> */}
         <BigTitlte text="SKILLS" />
       </Box>
     </ThemeProvider>
