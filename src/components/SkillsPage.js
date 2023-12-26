@@ -9,6 +9,7 @@ import BigTitlte from "../subComponents/BigTitlte";
 import { DarkTheme } from "./Themes";
 import { Skills } from "../data/SkillsData";
 import SkillsCard from "../subComponents/SkillsCard";
+import { Menubar } from "./Menubar";
 
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
@@ -134,10 +135,7 @@ const SkillsPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <Box>
-        <TopBar>
-          <LogoComponent theme="dark" />
-          <PowerButton />
-        </TopBar>
+        <Menubar click={true} barcolor="white" />
 
         <SocialIcons theme="dark" />
 

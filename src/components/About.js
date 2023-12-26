@@ -8,10 +8,10 @@ import ParticlesComponent from "../subComponents/ParticleComponent";
 import BigTitlte from "../subComponents/BigTitlte";
 import astronaut from "../assets/images/spaceman.png";
 import { Link } from "react-router-dom";
+import { Menubar } from "./Menubar";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  // width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -47,8 +47,6 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  // justify-content: center;
-  // align-items: center;
 
   font-size: calc(0.4rem + 1vw);
   backdrop-filter: blur(4px);
@@ -84,11 +82,7 @@ const About = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <Box>
-        <TopBar>
-          <LogoComponent theme="dark" />
-
-          <PowerButton />
-        </TopBar>
+        <Menubar click={true} barcolor="white" />
 
         <SocialIcons theme="dark" />
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ThemeProvider, styled } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
@@ -9,6 +9,7 @@ import BigTitlte from "../subComponents/BigTitlte";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
 import { DarkTheme } from "./Themes";
+import { Menubar } from "./Menubar";
 
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
@@ -93,18 +94,6 @@ const container = {
   },
 };
 
-const TopBar = styled.div`
-  position: fixed;
-  top: 1rem;
-  left: 0;
-  right: 0;
-  width: 50vw;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-
 const Projects = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
@@ -113,13 +102,18 @@ const Projects = () => {
     let element = ref.current;
 
     const rotate = () => {
-      element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      if (element) {
+        element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      }
 
-      return (yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)");
+      if (yinyang.current) {
+        return (yinyang.current.style.transform = `rotate(${-window.pageYOffset}deg)`);
+      }
     };
 
     window.addEventListener("scroll", rotate);
+
+    // Clean up the event listener when the component is unmounted
     return () => {
       window.removeEventListener("scroll", rotate);
     };
@@ -128,10 +122,7 @@ const Projects = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <Box>
-        <TopBar>
-          <LogoComponent theme="dark" />
-          <PowerButton />
-        </TopBar>
+        <Menubar click={true} barcolor="white" />
 
         <SocialIcons theme="dark" />
 

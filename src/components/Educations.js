@@ -9,6 +9,7 @@ import BigTitlte from "../subComponents/BigTitlte";
 import { DarkTheme } from "./Themes";
 import { Qualification } from "../data/EducationsData";
 import EduCard from "../subComponents/EduCard";
+import { Menubar } from "./Menubar";
 
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
@@ -130,10 +131,7 @@ const Educations = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <Box>
-        <TopBar>
-          <LogoComponent theme="dark" />
-          <PowerButton />
-        </TopBar>
+        <Menubar click={true} barcolor="white" />
 
         <SocialIcons theme="dark" />
 
