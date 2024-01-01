@@ -61,11 +61,11 @@ const Main = styled(motion.ul)`
   height: 40vh;
   display: flex;
   color: white;
+  z-index: 5;
 
   @media ${media.mediumDevices} {
     top: 8rem;
     left: calc(3.5rem + 5vw);
-    z-index: 5;
   }
 `;
 

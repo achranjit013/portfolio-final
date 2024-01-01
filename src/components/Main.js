@@ -142,8 +142,9 @@ const Contact = styled.a`
 
 const DisplaySocials = styled.span`
   display: block;
+
   @media ${media.mediumDevices} {
-    display: none;
+    display: ${(props) => (props.click ? "none" : "block")};
   }
 `;
 
@@ -158,7 +159,7 @@ const Main = () => {
       <Container>
         <Menubar click={click} />
 
-        <DisplaySocials>
+        <DisplaySocials click={click}>
           <SocialIcons theme={click ? "dark" : "light"} click={click} />
         </DisplaySocials>
 

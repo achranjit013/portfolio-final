@@ -41,9 +41,9 @@ const Icons = styled.div`
   }
 
   @media ${media.mediumDevices} {
-    flex-direction: row;
-    gap: 1rem;
-    left: 0.5rem;
+    flex-direction: ${(props) => (props.click ? "row" : "column")};
+    gap: ${(props) => (props.click ? "1rem" : "")};
+    left: ${(props) => (props.click ? "0.5rem" : "2rem")};
   }
 `;
 
@@ -54,7 +54,7 @@ const Line = styled(motion.span)`
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 
   @media ${media.mediumDevices} {
-    width: 0;
+    width: ${(props) => (props.click ? "0" : "2px")};
   }
 `;
 
