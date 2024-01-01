@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Me from "../assets/images/profile-img.png";
 import Resume from "../assets/resume/Ranjit Resume.docx";
+import SocialIcons from "../subComponents/SocialIcons";
 
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
@@ -58,6 +59,7 @@ const Box = styled(motion.div)`
     width: 90vw;
   }
 `;
+
 const SubBox = styled.div`
   width: 50%;
   position: relative;
@@ -105,14 +107,21 @@ const DownloadCVBtn = styled.button`
   background: white;
   border: none;
   cursor: pointer;
-  margin-bottom: 2rem;
 
   @media ${media.mediumDevices} {
     font-size: 1rem;
+    margin-bottom: 4rem;
   }
 
   @media ${media.smallDevices} {
     padding: 0.7rem 1rem;
+  }
+`;
+
+const DisplaySocials = styled.p`
+  display: none;
+  @media ${media.mediumDevices} {
+    display: block;
   }
 `;
 
@@ -137,6 +146,10 @@ const Intro = () => {
             </DownloadCVBtn>
           </a>
         </Text>
+
+        <DisplaySocials>
+          <SocialIcons theme="dark" click="true" />
+        </DisplaySocials>
       </SubBox>
       <SubBox>
         <motion.div

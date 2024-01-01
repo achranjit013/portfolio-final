@@ -41,11 +41,9 @@ const Icons = styled.div`
   }
 
   @media ${media.mediumDevices} {
-    flex-direction: ${(props) => (props.click ? "row" : "column")};
-    bottom: ${(props) => (props.click ? "23%" : "0")};
-    left: ${(props) => (props.click ? "50%" : "2rem")};
-    transform: ${(props) => (props.click ? "translate(-100%, 0%)" : "")};
-    gap: ${(props) => (props.click ? "1rem" : "")};
+    flex-direction: row;
+    gap: 1rem;
+    left: 0.5rem;
   }
 `;
 
@@ -56,7 +54,7 @@ const Line = styled(motion.span)`
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 
   @media ${media.mediumDevices} {
-    display: ${(props) => (props.click ? "none" : "")};
+    width: 0;
   }
 `;
 
