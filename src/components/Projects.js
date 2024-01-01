@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { ThemeProvider, styled } from "styled-components";
-import LogoComponent from "../subComponents/LogoComponent";
-import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";

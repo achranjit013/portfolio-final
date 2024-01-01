@@ -91,7 +91,7 @@ const Tags = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   border-top: 2px solid ${(props) => props.theme.body};
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 
   ${Box}:hover & {
     border-top: 2px solid ${(props) => props.theme.text};

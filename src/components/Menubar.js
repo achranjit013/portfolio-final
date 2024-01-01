@@ -143,6 +143,7 @@ const Experience = styled(NavLink)`
 
 export const Menubar = ({ click, barcolor }) => {
   const [showMenu, setShowMenu] = useState(false);
+
   return (
     <TopBar>
       <TopBarLeft>

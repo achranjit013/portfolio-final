@@ -1,9 +1,7 @@
 import React from "react";
 import { ThemeProvider, keyframes, styled } from "styled-components";
 import { DarkTheme } from "./Themes";
-import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
 import ParticlesComponent from "../subComponents/ParticleComponent";
 import BigTitlte from "../subComponents/BigTitlte";
 import astronaut from "../assets/images/spaceman.png";
@@ -52,22 +50,10 @@ const Main = styled.div`
   backdrop-filter: blur(4px);
 
   position: absolute;
-  left: calc(5rem + 5vw);
+  left: calc(3.5rem + 5vw);
   top: 10rem;
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
-`;
-
-const TopBar = styled.div`
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  right: 0;
-  width: 50vw;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 `;
 
 const BottomLinks = styled.p`

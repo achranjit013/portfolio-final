@@ -248,34 +248,34 @@ export const Design = (props) => {
 export const Bachelor = (props) => {
   return (
     <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {" "}
         <path
           d="M4 13L24 8L44 13L24 18L4 13Z"
           stroke="#000000"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>{" "}
         <path
           d="M13 16V25.9706C13 25.9706 18 29 24 29C30 29 35 25.9706 35 25.9706V16"
           stroke="#000000"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>{" "}
         <path
           d="M7 14V36"
           stroke="#000000"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>{" "}
         <rect
           x="4"
@@ -284,9 +284,9 @@ export const Bachelor = (props) => {
           height="6"
           fill="#ffffff"
           stroke="#000000"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></rect>{" "}
       </g>
     </svg>
@@ -296,11 +296,11 @@ export const Bachelor = (props) => {
 export const Bootcamp = (props) => {
   return (
     <svg viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {" "}
@@ -338,11 +338,11 @@ export const Developer = (props) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 256 203"
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {" "}

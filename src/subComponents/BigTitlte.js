@@ -24,9 +24,6 @@ const media = {
 
 const Text = styled.h1`
   position: fixed;
-  // top: ${(props) => props.top};
-  // left: ${(props) => props.left};
-  // right: ${(props) => props.right};
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);

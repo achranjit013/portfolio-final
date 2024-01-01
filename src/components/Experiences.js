@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { ThemeProvider, styled } from "styled-components";
-import LogoComponent from "../subComponents/LogoComponent";
-import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
@@ -95,18 +93,6 @@ const container = {
   },
 };
 
-const TopBar = styled.div`
-  position: fixed;
-  top: 1rem;
-  left: 0;
-  right: 0;
-  width: 50vw;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-
 const Experiences = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
@@ -115,13 +101,17 @@ const Experiences = () => {
     let element = ref.current;
 
     const rotate = () => {
-      element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      if (element) {
+        element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      }
 
-      return (yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)");
+      if (yinyang.current) {
+        return (yinyang.current.style.transform = `rotate(${-window.pageYOffset}deg)`);
+      }
     };
 
     window.addEventListener("scroll", rotate);
+
     return () => {
       window.removeEventListener("scroll", rotate);
     };

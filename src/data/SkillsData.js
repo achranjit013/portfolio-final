@@ -15,7 +15,6 @@ export const Skills = [
       "Responsive Design",
       "Cross-Browser Development",
       "APIs and RESTful Services",
-      "Web Security",
     ],
   },
   {

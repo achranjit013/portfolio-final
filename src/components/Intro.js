@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Me from "../assets/images/profile-img.png";
+import Resume from "../assets/resume/Ranjit Resume.docx";
 
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
@@ -55,9 +56,6 @@ const Box = styled(motion.div)`
 
   @media ${media.mediumDevices} {
     width: 90vw;
-    & > :last-child {
-      // display: none;
-    }
   }
 `;
 const SubBox = styled.div`
@@ -82,21 +80,39 @@ const SubBox = styled.div`
 const Text = styled.div`
   font-size: calc(1em + 1.5vw);
   color: ${(props) => props.theme.body};
-  padding: 2rem;
+  padding: 1rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
-  & > *:last-child {
+  & > *:nth-child(3) {
     color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
   }
 
   @media ${media.mediumDevices} {
-    // display: flex;
+    padding: 0.5rem;
+  }
+`;
+
+const DownloadCVBtn = styled.button`
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: black;
+  background: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+
+  @media ${media.mediumDevices} {
     font-size: 1rem;
+  }
+
+  @media ${media.smallDevices} {
+    padding: 0.7rem 1rem;
   }
 `;
 
@@ -115,6 +131,11 @@ const Intro = () => {
             I am aspiring software developer passionate about crafting engaging
             and responsive web applications!
           </h6>
+          <a href={Resume} download>
+            <DownloadCVBtn type="button" className="btn btn-light">
+              Download CV <i className="fa-solid fa-download"></i>
+            </DownloadCVBtn>
+          </a>
         </Text>
       </SubBox>
       <SubBox>
